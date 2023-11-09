@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Styles Css -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <title>Pertemuan-1</title>
+
+</head>
+
+<body>
+
+    <head>
+        <div class="border">
+            <img src="../img/putra.png" alt="Putra" width="auto" height="180">
+        </div>
+    </head>
+    <main>
+        <div class="artikel">
+            <div class="judul">
+                <h1>Muhammad Ramadhan Syah Putra</h1>
+            </div>
+            <div class="deskripsi">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente odio laudantium adipisci, voluptas
+                    ad eligendi maiores temporibus quibusdam eum vitae, nobis officia animi ipsam illum perspiciatis
+                    quas deserunt ex, consectetur explicabo excepturi! Omnis quaerat perspiciatis blanditiis mollitia
+                    aliquam dicta voluptate tempore. Odit delectus sed corrupti asperiores recusandae, maxime non optio
+                    nihil quis modi nisi et fugit harum sapiente odio similique magnam consectetur amet tempore
+                    necessitatibus commodi. Autem esse maxime ipsum unde voluptates. Repudiandae minus rerum officiis
+                    saepe nam incidunt. Dolorum itaque velit est placeat eligendi. Cum reiciendis quisquam similique
+                    eveniet, nisi voluptate, saepe, et aperiam corrupti ipsam consequuntur esse deserunt.
+                </p>
+                <div class="contact-me">
+                    <h3>Contact me</h3>
+                    <form action="#" method="get" onsubmit="submitForm(event)">
+                        <label for="Email">Email : </label>
+                        <input type="text" id="Email" name="email" placeholder="Email" autocomplete="off" autofocus><br>
+                        <textarea name="comentar" cols="30" rows="10" placeholder="Comentar"></textarea><br>
+                        <button type="submit">Kirim</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+
+            let email = document.getElementById('Email').value;
+            let comment = document.querySelector('textarea[name="comentar"]').value;
+
+            if (!email && !comment) {
+                alert('Tidak ada tanggapan!');
+            } else {
+                alert('Email: ' + email + '\nComentar: ' + comment);
+            }
+        }
+    </script>
+</body>
+
+</html>
